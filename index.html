@@ -29,10 +29,12 @@
         <div class="jumbotron">
           <div class="hidden" id="win">
             <h1>You win!</h1>
+            <img class="container" src="https://i.imgur.com/eDoMoaU.jpg"></img>
             <a id="reset">Play again?</a>
           </div>
           <div class="hidden" id="lose">
             <h1>You lose.</h1>
+            <img class="container" src="http://i.imgur.com/FCLzAiR.png"></img>
             <a id="reset">Try again?</a>
           </div>
           <div class="row center-block game">
@@ -43,22 +45,30 @@
             </div>
             <div class="row">
               <div class="col-md-6 col-md-offset-3">
-                <button type="button" id="submit-button" class="btn btn-success btn-block add-bottom-margin">Submit</button>
+                <button type="submit" id="submit-button" class="btn btn-success btn-block add-bottom-margin">Submit</button>
               </div>
             </div>
             <div class="text-center">
               <p class="lead">You have <span id="counter">X</span> guesses remaining</p>
               <div class="btn-group">
                 <button type="button" id="reset-game" class="btn btn-default btn-sm">Reset</button>
-                <button type="button" class="btn btn-default btn-sm">Hint?</button>
+                <button type="button" id="hint" class="btn btn-default btn-sm">Hint?</button>
               </div>
               <div class="row">
                 <a id="progressLink" class="expand">Show/hide progress</a>
                 <ul class="list-group" id="progress">
-                  <li class="list-group-item">
-                    <p>X</p>
-                    <span class="badge" id="hotter">Hotter</span>
-                    <span class="badge" id="colder">Colder</span>
+                  <li class="list-group-item hidden" id="item1">
+                    <p>Attempt 1: <span id="1">X</span>. Try going <span class="downOrUp1">up</span>.
+                    <span class="badge hide" id="hotOrCold1"></span>
+                  </li>
+                  <li class="list-group-item hidden" id="item2">
+                    <p>Attempt 2: <span id="2">X</span>. Try going <span class="downOrUp2">up</span>. You're getting <span class="hotOrCold2">hotter</span>.
+                  </li>
+                  <li class="list-group-item hidden" id="item3">
+                    <p>Attempt 3: <span id="3">X</span>. Try going <span class="downOrUp3">up</span>. You're getting <span class="hotOrCold3">hotter</span>.
+                  </li>
+                  <li class="list-group-item hidden" id="item4">
+                    <p>Attempt 4: <span id="4">X</span>. Try going <span class="downOrUp4">up</span>. You're getting <span class="hotOrCold4">hotter</span>.
                   </li>
                 </ul>
               </div>
