@@ -27,22 +27,40 @@
       </header>
       <div class="col-md-8 col-md-offset-2">
         <div class="jumbotron">
-          <div class="row center-block">
+          <div class="hidden" id="win">
+            <h1>You win!</h1>
+            <a id="reset">Play again?</a>
+          </div>
+          <div class="hidden" id="lose">
+            <h1>You lose.</h1>
+            <a id="reset">Try again?</a>
+          </div>
+          <div class="row center-block game">
             <h1>Guess the Number</h1>
             <p class="lead">Input your number below and hit submit!</p>
-            <div class="row">
+            <div class="row" id="input">
               <input type="text" class="form-control input-lg add-bottom-margin" placeholder="Number 1 - 100">
             </div>
             <div class="row">
               <div class="col-md-6 col-md-offset-3">
-                <button type="button" class="btn btn-success btn-block add-bottom-margin">Submit</button>
+                <button type="button" id="submit-button" class="btn btn-success btn-block add-bottom-margin">Submit</button>
               </div>
             </div>
             <div class="text-center">
-              <p class="lead">You have X guesses remaining</p>
+              <p class="lead">You have <span id="counter">X</span> guesses remaining</p>
               <div class="btn-group">
-                <button type="button" class="btn btn-default btn-sm">Reset</button>
+                <button type="button" id="reset-game" class="btn btn-default btn-sm">Reset</button>
                 <button type="button" class="btn btn-default btn-sm">Hint?</button>
+              </div>
+              <div class="row">
+                <a id="progressLink" class="expand">Show/hide progress</a>
+                <ul class="list-group" id="progress">
+                  <li class="list-group-item">
+                    <p>X</p>
+                    <span class="badge" id="hotter">Hotter</span>
+                    <span class="badge" id="colder">Colder</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>          
@@ -52,8 +70,10 @@
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+
   </body>
 </html>
